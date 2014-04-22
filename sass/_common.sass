@@ -1,49 +1,343 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
-// 			+s(codedby) //gets default value for spritemap as $icons
-// ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
-// ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
-// ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
-// ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
-// ## making bw-images
-//     img
-//			@extend %gray
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
-//			display: none
-// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
-//
-// ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
-//			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
-//				display: none
-// ## fonts 
-// Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
-// =book
-// 	font-family: "book",arial,sans-serif 
-	
+// 
+// --------------------------------------------------
+
+// Fonts
+// --------------------------------------------------
++font("helveticaneue", "helveticaneue")
++font("helveticaneuebold", "helveticaneuebold")
++font("helveticaneuelight", "helveticaneuelight")
+
+// Variables
+// --------------------------------------------------
+$font-base: "helveticaneue", Helvetica, Arial, sans-serif
+$font-bold: "helveticaneuebold", Helvetica, Arial, sans-serif
+$font-light: "helveticaneuelight", Helvetica, Arial, sans-serif
+
+// Common blocks
+// --------------------------------------------------
 body
-	font-size: 12px 
-	font-family: Arial, sans-serif 
+	font-size: 20px 
+	font-family: $font-base
 	line-height: 1.4
 
+.wrap
+	width: 960px
+	margin-left: auto
+	margin-right: auto
 
-// common blocks      
+// Headings
+// --------------------------------------------------
+
+// Buttons
+// --------------------------------------------------
+.btn
+	height: 53px
+	line-height: 53px
+	padding: 0 20px
+	display: inline-block
+	@include border-radius(7px)
+	border: 3px solid #fff
+	background: transparent 	
+	color: #FFF
+	text-decoration: none
+	+transition(.2s)
+	&:hover
+		background: #FFF
+		color: #E50039 
+		+transition(.2s)
+	&:active
+		position: relative
+		top: 1px
+// Header
+// --------------------------------------------------
+.header
+	padding-bottom: 65px
+	background: #E50039
+	color: #FFF 
+.header__topper
+	+clr
+	padding-bottom: 60px
+	margin-bottom: 50px
+	border-bottom: 1px solid #ff075c 
+.header__topper-logo
+	float: left
+	margin-right: 80px
+	+s(logo)
+.header__topper-note
+	margin-bottom: 50px
+.header__topper-descr
+	padding-top: 60px
+	padding-bottom: 1px
+	overflow: hidden
+	font-size: 27px 
+	font-family: $font-light
+
+.header__lists
+	+clr
+.header__lists-left
+	width: 350px
+	margin-right: 55px
+	float: left
+	font-family: $font-bold
+	text-align: right
+	line-height: 1.5 
+.header__lists-right
+	overflow: hidden
+	font-family: $font-light
+	line-height: 1.5 
+.header__lists-right-note
+	margin-top: 30px
+
+// list
+// --------------------------------------------------
+.list
+.list__bg
+	height: 400px
+	padding-top: 50px
+	background-image: url("../img/bg.jpg")
+	color: #FFF
+	+cover
+.list__title
+	margin-bottom: 28px
+	font-family: $font-bold
+.list__wrap
+	+clr
+.list__left
+	width: 480px
+	float: left
+.list__right
+	width: 460px
+	float: right
+.list__item
+	padding: 0 50px
+	li
+		margin-bottom: 13px
+		position: relative
+		+clr
+		.list__item-num
+			content: ""
+			width: 33px
+			height: 33px
+			line-height: 33px
+			margin-right: 12px
+			float: left
+			+border-radius(50%)
+			font-family: $font-bold
+			color: #FFF
+			text-align: center
+			font-style: normal 
+		.list__item1
+			background: #f00
+			vertical-align: middle
+		.list__item2
+			background: #009DFC
+		.list__item3
+			background: #B78FFF
+		.list__item4
+			background: #DC0
+		.list__item5
+			background: #007ef1 
+		.list__item6
+			background: #00c300
+		.list__item7
+			background: #00bfa7
+	a
+		color: #FFF
+		text-decoration: none
+		border-bottom: 1px dotted #fff
+		&:hover
+			border-bottom: 1px dotted transparent
+.page
+	background: #F0F0F0
+
+.box_mod
+	position: relative
+	top: -70px
+.box-i
+	background: #FFF 
+	padding: 130px 60px 50px
+	line-height: 1.5
+	+border-radius(7px)
+	position: relative
+	text-align: center
+	+box
+	&:after
+		content: ""
+		position: absolute
+		top: 40px
+		left: 50%
+		margin-left: -32px
+.box_alt
+	.box-i
+		background: transparent
+	.box__info
+		padding: 0 0px 75px
+.box1
+	&:after
+		+s(ico1)
+.box2
+	&:after
+		+s(ico3)
+.box3
+	&:after
+		+s(ico4)
+.box4
+	&:after
+		+s(ico5)
+.box5
+	&:after
+		+s(ico6)
+.box6
+	&:after
+		+s(ico7)
+.title
+	margin-bottom: 18px
+	font-size: 35px
+	text-transform: uppercase
+	text-align: center
+	font-family: $font-light
+	strong
+		font-family: $font-bold
+.box-one
+	.box-i
+		padding: 130px 69px 50px
+		text-align: center
+.box3
+	padding: 115px 20px 0px
+	.title
+		margin-bottom: 13px
+	.box__info
+		padding: 0 10px 75px
+		text-align: center
+		position: relative
+		a
+			color: #0082e7
+			text-decoration: none 
+
+.about
+.about__topper
+	padding-bottom: 38px
+	margin-bottom: 32px
+	position: relative
+	text-align: center
+	&:after
+		content: ""
+		width: 112px
+		height: 2px
+		background: #BABABA 
+		position: absolute
+		left: 425px
+		bottom: 0
+.about__cont
+	font-size: 15px
+	text-align: center
+	line-height: 1.6 
+	p
+		margin-bottom: 27px
+.about-i
+	padding: 70px 55px 55px
+	position: relative
+	&:after
+		content: ""
+		+s(ico2)
+		position: absolute
+		top: -17px
+		left: 50%
+		margin-left: -27px
+
+.about__wrap
+	+clr
+	li
+		margin-bottom: 26px
+		font-size: 15px
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			top: 10px
+			left: -25px
+			font-size: 15px
+			color: #272727
+			+s(i-list)
+	a
+		color: #0082e7
+		text-decoration: none
+		border-bottom: 1px dotted #0082e7
+		&:hover
+			border-bottom: 1px dotted transparent
+	.about__left
+		width: 480px
+		float: left
+		ul
+			padding-left: 35px
+			padding-right: 30px
+			line-height: 1.6
+	.about__right
+		width: 420px
+		padding-left: 60px
+		float: left
+	
+.listen
+	overflow: hidden
+	font-size: 15px
+	margin: 0 -60px
+	ul
+		padding-left: 35px
+		padding-right: 30px
+		line-height: 1.6
+		text-align: left
+	li
+		margin-bottom: 30px
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			top: 10px
+			left: -25px
+			font-size: 15px
+			color: #272727
+			+s(i-list)
+	a
+		font-size: 15px
+		color: #0082E7
+	.listen__left
+		width: 540px
+		float: left
+	.listen__right
+		width: 420px
+		float: left
+		text-align: left
+
+.footer
+	padding: 60px 0 50px
+	text-align: center
+	background: #e50039
+	.btn
+		margin-bottom: 45px
+	.load
+		display: block
+		font-size: 20px
+		text-decoration: underline
+		color: #FFF 
+		&:hover
+			text-decoration: none
+	.load__note
+		color: #ff0052
+
+.copy
+	height: 70px
+	line-height: 70px
+	background: #000 
+	color: #767676
+	font-size: 16px
+.copy-i
+	text-align: center
+// &:before
+// 	content: ""
+// 	width: 112px
+// 	height: 2px
+// 	background: #bababa
+// 	position: absolute
+// 	left: 425px
+// 	bottom: 40px
+ 
