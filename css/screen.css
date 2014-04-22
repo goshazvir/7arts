@@ -100,6 +100,8 @@ body { font-size: 20px; font-family: "helveticaneue", Helvetica, Arial, sans-ser
 
 .box6:after { background: url('../img/icons-sa5edea5596.png') 0 -609px no-repeat; width: 56px; height: 56px; }
 
+.box7:after { background: url('../img/icons-sa5edea5596.png') 0 -801px no-repeat; width: 44px; height: 58px; }
+
 .title { margin-bottom: 18px; font-size: 35px; text-transform: uppercase; text-align: center; font-family: "helveticaneuelight", Helvetica, Arial, sans-serif; }
 .title strong { font-family: "helveticaneuebold", Helvetica, Arial, sans-serif; }
 
@@ -146,6 +148,10 @@ body { font-size: 20px; font-family: "helveticaneue", Helvetica, Arial, sans-ser
 .copy { height: 70px; line-height: 70px; background: black; color: #767676; font-size: 16px; }
 
 .copy-i { text-align: center; }
+
+.tel { font-size: 27px; color: #272727; }
+
+.mail { font-size: 27px; color: #0082e7; text-decoration: none; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
