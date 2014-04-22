@@ -25,7 +25,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 @font-face { font-family: "helveticaneuelight"; src: url("fonts/helveticaneuelight.eot"); src: url("fonts/helveticaneuelight.eot?#iefix") format("embedded-opentype"), url("fonts/helveticaneuelight.woff") format("woff"), url("fonts/helveticaneuelight.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
-body { font-size: 20px; font-family: "helveticaneue", Helvetica, Arial, sans-serif; line-height: 1.4; }
+body { min-width: 1070px; font-size: 20px; font-family: "helveticaneue", Helvetica, Arial, sans-serif; line-height: 1.4; }
 
 .wrap { width: 960px; margin-left: auto; margin-right: auto; }
 
@@ -138,7 +138,7 @@ body { font-size: 20px; font-family: "helveticaneue", Helvetica, Arial, sans-ser
 .listen li { margin-bottom: 30px; position: relative; }
 .listen li:before { content: ""; position: absolute; top: 10px; left: -25px; font-size: 15px; color: #272727; background: url('../img/icons-sa5edea5596.png') 0 -869px no-repeat; width: 15px; height: 2px; }
 .listen a { font-size: 15px; color: #0082e7; }
-.listen .listen__left { width: 540px; float: left; }
+.listen .listen__left { width: 503px; float: left; }
 .listen .listen__right { width: 420px; float: left; text-align: left; }
 
 .footer { padding: 60px 0 50px; text-align: center; background: #e50039; }
