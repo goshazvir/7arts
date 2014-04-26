@@ -201,9 +201,10 @@ body { min-width: 1070px; font-size: 20px; font-family: "helveticaneue", Helveti
 .input::-webkit-input-placeholder { color: black; }
 .input:focus, .input.is-active { background: white; -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25); -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25); box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25); color: black; }
 
-.textarea { width: 100%; min-height: 117px; padding: 5px 10px; -webkit-border-radius: 7px; -moz-border-radius: 7px; -ms-border-radius: 7px; -o-border-radius: 7px; border-radius: 7px; background-color: #eaeaea; color: black; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border: none; resize: vertical; }
+.textarea { width: 100%; min-height: 117px; padding: 10px; -webkit-border-radius: 7px; -moz-border-radius: 7px; -ms-border-radius: 7px; -o-border-radius: 7px; border-radius: 7px; background-color: #eaeaea; color: black; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border: none; resize: vertical; }
 .textarea:-moz-placeholder, .textarea::-moz-placeholder { color: black; opacity: 1; }
 .textarea::-webkit-input-placeholder { color: black; }
+.textarea:focus, .textarea.is-active { background: white; -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25); -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25); box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25); color: black; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
