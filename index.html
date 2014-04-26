@@ -11,7 +11,116 @@
 	<script src="js/common.js"></script>
 </head>
 <body>
-
+<div class="overlay is-active"></div>
+<div class="popup js-popup1">
+	<a href="#" class="popup__arr popup__left is-unnactive"></a>
+	<a href="#" class="popup__arr popup__right"></a>
+	<div class="popup-i">
+		<i class="popup__close"></i>
+		<div class="popup__top">
+			<div class="popup__top-num">4</div>
+			<div class="popup__top-descr">
+				<h3 class="h3">школа современных</h3>
+				<h2 class="h2">компетенций управления</h2>
+			</div>
+		</div>
+		<div class="popup__content">
+			<p>Система обучения студентов универсальным навыкам эффективного управления: анализа, проектирования, менеджмента, маркетинга, создания команд, организации взаимодействия, контроля и оценки, лидерства, сетевого сотрудничества, краудсорсинга и других.</p>
+			<div class="popup__col">
+				<div class="popup__col-left">
+					<ul>
+						<li>
+							<span>
+								Курсы обучения и  ассессмента
+							</span>
+						</li>
+					</ul>
+				</div>
+				<div class="popup__col-right">
+					<ul>
+						<li>
+							<span>
+								Служба временного трудоустройства и поиска работодателей
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="popup__col popup__col_mod">
+			<div class="popup__meta">Преимущества</div>
+			<div class="popup__col-left">
+				<ul class="list-mod">
+					<li>
+						<span>
+							Обеспечивается содержательное
+							продвижение вуза и его услуг в школы
+							и семьи
+						</span>
+					</li>
+					<li>
+						<span>
+							Решаются задачи мотивации и побуждения
+							будущих студентов и их родителей к выбору
+							именно этого вуза (узнаваемость, появление
+							хороших знакомых из числа студентов,
+							снижение психологического дискомфорта
+							при переходе из школы в вуз, появление
+							эмоциональных привязанностей)
+						</span>
+					</li>
+				</ul>
+			</div>
+			<div class="popup__col-right">
+				<ul class="list-mod">
+					<li>
+						<span>
+							Создаётся система качественного игрового
+							отбора одарённых кандидатов в абитуриенты
+						</span>
+					</li>
+					<li>
+						<span>
+							Получение инструмента сопровождения,
+							поддержки и усиления мотивации отобранных
+							кандидатов вплоть до их выпуска из школы
+							и подачи документов в вуз
+						</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup_mod js-popup2 is-active">
+	<div class="popup-i">
+		<i class="popup__close"></i>
+		<div class="popup__par">
+			<p>Политическое учение Н. Макиавелли неоднозначно.</p>
+			<p>Как писал С.Хантингтон, социальная парадигма</p>
+			<p>интегрирует механизм власти, отмечает Г.Алмонд</p>
+		</div>
+		<div class="popup__content">
+			<div class="popup__row">
+				<label for="1" class="label">ФИО</label>
+				<input id="1" type="text" class="input" placeholder="Анна Александровна Семенова">
+			</div>
+			<div class="popup__row">
+				<label for="1" class="label">Контактный телефон</label>
+				<input id="1" type="text" class="input is-active" placeholder="+7 (929) 225-45-93">
+			</div>
+			<div class="popup__row">
+				<label for="1" class="label">Электронная почта</label>
+				<input id="1" type="text" class="input" placeholder="">
+			</div>
+			<div class="popup__row">
+				<label for="1" class="label">Электронная почта</label>
+				<textarea class="textarea"></textarea>
+			</div>
+			<a href="#" class="btn btn_send">Отправить</a>
+		</div>
+	</div>
+</div>
 <!-- BEGIN  out-->
 <div class="out">
 	<!-- BEGIN header -->
@@ -23,7 +132,7 @@
 					<div class="header__topper-note">
 						<p>Школа проектирования воспитательных систем для вузов в области организации социальной и воспитательной работы со студентами и аспирантами</p>
 					</div>
-					<a href="#" class="btn">Узнать подробнее</a>
+					<a href="#" class="btn js-btn-popup1 js-popup1">Узнать подробнее</a>
 				</div>
 			</div>
 			<div class="header__lists">
@@ -198,7 +307,7 @@
 <!-- BEGIN footer -->
 <div class="footer">
 	<div class="footer-i wrap">
-		<a href="#" class="btn">Узнать подробнее</a>
+		<a href="#" class="btn js-btn-popup2">Узнать подробнее</a>
 		<a href="#" class="load">Скачать информационный буклет</a>
 		<div class="load__note">.pdf, 174 Кб</div>
 	</div>

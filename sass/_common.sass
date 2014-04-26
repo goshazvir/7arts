@@ -49,6 +49,13 @@ body
 	&:active
 		position: relative
 		top: 1px
+
+.btn_send
+	border-color: #00a8eb
+	color: #00a8eb
+	&:hover
+		background: #00a8eb
+		color: #fff 
 // Header
 // --------------------------------------------------
 .header
@@ -356,4 +363,185 @@ body
 // 	position: absolute
 // 	left: 425px
 // 	bottom: 40px
- 
+
+.overlay
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background: rgba(#fff, .8)
+	z-index: -1
+	opacity: 0
+	+transition(all .3s linear)
+	&.is-active
+		opacity: 1
+		z-index: 1000
+.popup
+	position: absolute
+	width: 854px
+	left: 50%
+	top: 50px
+	margin-left: -428px
+	z-index: -1
+	opacity: 0
+	background-color: #fff
+	+box-shadow(0 0 0 7px rgba(0,0,0,.2))
+	@include border-radius(14px)
+	border-radius: 5px
+	+transition(all .3s ease-in)
+	&.is-active
+		opacity: 1
+		z-index: 1001
+	&.popup_mod
+		width: 636px
+		margin-left: -316px
+		.popup-i
+			padding: 32px 40px 40px
+	.popup-i
+		position: relative
+		padding: 40px
+	.popup__close
+		position: absolute
+		top: 12px
+		right: 12px
+		+s(i-arr)
+		&:hover
+			cursor: pointer
+	.popup__top
+		padding-bottom: 28px
+		margin-bottom: 30px
+		border-bottom: 2px solid #eaeaea
+		.h3
+			margin-top: 15px
+			line-height: 1
+			font-size: 35px
+			font-family: $font-light
+			text-transform: uppercase
+			letter-spacing: -0.04em
+		.h2
+			font-size: 35px
+			font-family: $font-bold
+			text-transform: uppercase
+	.popup__content
+		line-height: 1.5 
+	.popup__top-num
+		width: 64px
+		height: 64px
+		line-height: 64px
+		+border-radius(50%)
+		margin-right: 42px
+		float: left
+		text-align: center
+		background: #ddcc00
+		font-family: $font-bold
+		font-size: 35px
+		color: #FFF
+	.popup__top-descr
+		overflow: hidden
+	.popup__col
+		padding-bottom: 34px
+		margin-top: 23px
+		margin-bottom: 10px
+		border-bottom: 2px solid #ddcc00
+		+clr
+		&.popup__col_mod
+			margin-top: 31px
+			border-bottom: none 
+		.popup__meta
+			margin-bottom: 22px
+		li
+			position: relative
+			font-size: 15px
+			line-height: 1.7
+			&:before
+				content: ""
+				position: absolute
+				top: 12px
+				left: -30px
+				font-size: 15px
+				color: #272727
+				+s(i-list)
+		.list-mod
+			padding-right: 30px
+			li
+				&:before
+					+s(i-bullet)
+					left: -23px
+					top: 9px
+	.popup__col-left
+		width: 350px
+		padding-left: 37px
+		float: left
+	.popup__col-right
+		width: 321px
+		padding-left: 56px
+		float: left
+	.popup__arr
+		width: 46px
+		height: 92px
+		display: inline-block
+		background: #007EF1
+		position: absolute
+		top: 365px
+		+transition(all .2s ease-in)
+		&.is-unnactive
+			background: #B78FFF
+		&:hover
+			+opacity(0.8)
+			+transition(all .2s ease-in)
+	.popup__left
+		left: -46px
+		+border-radius(7px 0 0 7px)
+		+box-shadow(inset -7px 0 0 rgba(0, 0, 0, 0.2))
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			margin-top: -14px
+			left: 13px
+			+s(i-left)
+	.popup__right
+		right: -46px
+		+border-radius(0px 7px 7px 0px)
+		+box-shadow(inset 7px 0 0 rgba(0, 0, 0, 0.2))
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			margin-top: -14px
+			right: 13px
+			+s(i-right)
+	.popup__row
+		margin-bottom: 25px
+	.popup__par
+		margin-bottom: 30px
+.label
+	margin-bottom: 10px
+	display: block
+	font-size: 15px 
+	color: #929292
+.input
+	width: 100%
+	height: 49px
+	padding: 5px 25px
+	@include border-radius(7px)
+	background-color: #eaeaea
+	color: #000 
+	+box
+	+placeholder-color(#000)
+	&:focus, &.is-active
+		background: #fff 
+		@include box-shadow(inset 0 0 5px rgba(0,0,0,.25))
+		color: #000
+.textarea
+	width: 100%
+	min-height: 117px
+	padding: 5px 10px
+	@include border-radius(7px)
+	background-color: #eaeaea
+	color: #000 
+	+box
+	+placeholder-color(#000)
+	border: none
+	resize: vertical
